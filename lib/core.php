@@ -8,8 +8,8 @@ require_once(TKGP_ROOT . 'lib/page.php');
 require_once(TKGP_ROOT . 'lib/project.php');
 require_once(TKGP_ROOT . 'lib/vote.php');
 require_once(TKGP_ROOT . 'lib/news.php');
-require_once(TKGP_ROOT . 'lib/task.php');
-require_once(TKGP_ROOT . 'lib/tasks.php');
+/*require_once(TKGP_ROOT . 'lib/task.php');
+require_once(TKGP_ROOT . 'lib/tasks.php');*/
 
 /**
  * Создание типа проектов
@@ -99,12 +99,12 @@ function tkgp_create_meta_box()
         'normal',
         'high');
 
-    add_meta_box('tk_project_meta_steps',
+    /*add_meta_box('tk_project_meta_steps',
         _x('Plane of Project', 'tk_meta', 'tkgp'),
         'tkgp_show_metabox_steps',
         null,
         'normal',
-        'high');
+        'high');*/
 
     add_meta_box('tk_project_meta_votes',
         _x('Votes', 'tk_meta', 'tkgp'),
@@ -595,7 +595,7 @@ function tkgp_check_subpages()
         switch ($wp->query_vars['tksubpage']) {
             case 'informo':
             case 'statistiko':
-            case 'taskoj':
+            //case 'taskoj':
             case 'administrado':
             case 'teamo':
                 break;
